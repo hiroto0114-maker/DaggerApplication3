@@ -7,9 +7,7 @@ import javax.inject.Singleton
 /*
    たった一つのインスタンスをみんなで共有するために使う@Singleton
  */
-//@Singleton
+@Singleton
 class Driver @Inject constructor() {
-    fun drive(){
-        Log.d("123","123")
-    }
+    var hp:Int = 10
 }
