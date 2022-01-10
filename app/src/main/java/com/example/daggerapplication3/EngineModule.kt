@@ -1,13 +1,16 @@
 package com.example.daggerapplication3
 
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module
-abstract class EngineModule {
+class EngineModule {
 
-    @Binds
-    abstract fun bindEngine(engine : PetrolEngine):Engine
+    //@Singleton
+    @Provides
+    fun provideEngine(driver: Driver):Driver{
+        return driver
+    }
 
 }
